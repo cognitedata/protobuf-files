@@ -12,7 +12,7 @@ message DataPointListItem {
     int64 id = 1;
     string externalId = 2;
 
-    oneof numericOrStringDatapoints {
+    oneof datapointType {
         NumericDatapoints numericDatapoints = 3;
         StringDatapoints stringDatapoints = 4;
         AggregateDatapoints aggregateDatapoints = 5;

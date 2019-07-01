@@ -14,7 +14,7 @@ message DataPointInsertionItem {
         string externalId = 2;
     }
 
-    oneof numericOrStringDatapoints {
+    oneof datapointType {
         NumericDatapoints numericDatapoints = 3;
         StringDatapoints stringDatapoints = 4;
     }
