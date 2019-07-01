@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package v1.timeseries;
+package com.cognite.v1.timeseries;
 
 import "data_points.proto";
 
@@ -20,10 +20,6 @@ message DataPointInsertionItem {
     }
 }
 
-message DataPointInsertionItems {
-    repeated DataPointInsertionItem item = 1;
-}
-
 message DataPointInsertionRequest {
-    DataPointInsertionItems items = 1;
+    repeated DataPointInsertionItem items = 1;
 }
