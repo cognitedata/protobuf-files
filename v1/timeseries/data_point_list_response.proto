@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package v1.timeseries;
+
+import "data_points.proto";
+
+option java_package = "com.cognite.api.v1.timeseries.proto";
+option csharp_namespace = "Cognite.Api.V1.TimeSeries.Proto";
+option java_multiple_files = true;
+
+message DataPointListItem {
+    int64 id = 1;
+    string externalId = 2;
+
+    oneof numericOrStringDatapoints {
+        NumericDatapoints numericDatapoints = 3;
+        StringDatapoints stringDatapoints = 4;
+        AggregateDatapoints aggregateDatapoints = 5;
+    }
+}
+
+message DataPointListItems {
+    repeated DataPointListItem item = 1;
+}
+
+message DataPointListResponse {
+    DataPointListItems items = 1;
+}
