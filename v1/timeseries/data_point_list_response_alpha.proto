@@ -6,12 +6,13 @@ import "data_points.proto";
 
 option java_multiple_files = true;
 
-message DataPointListItem {
+message DataPointListItemAlpha {
     int64 id = 1;
     string externalId = 2;
     bool isString = 6;
     bool isStep = 7;
     string unit = 8;
+    string nextCursor = 9;
 
     oneof datapointType {
         NumericDatapoints numericDatapoints = 3;
@@ -20,6 +21,6 @@ message DataPointListItem {
     }
 }
 
-message DataPointListResponse {
-    repeated DataPointListItem items = 1;
+message DataPointListResponseAlpha {
+    repeated DataPointListItemAlpha items = 1;
 }
