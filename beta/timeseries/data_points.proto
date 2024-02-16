@@ -13,6 +13,7 @@ message NumericDatapoint {
     int64 timestamp = 1;
     double value = 2;
     Status status = 3;
+    bool nullValue = 4;
 }
 
 message NumericDatapoints {
