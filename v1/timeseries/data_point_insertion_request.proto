@@ -10,6 +10,7 @@ message DataPointInsertionItem {
     oneof idOrExternalId {
         int64 id = 1;
         string externalId = 2;
+        InstanceId instanceId = 5;
     }
 
     oneof datapointType {
