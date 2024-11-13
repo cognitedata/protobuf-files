@@ -20,6 +20,11 @@ message NumericDatapoints {
     repeated NumericDatapoint datapoints = 1;
 }
 
+message NumericDatapointWithoutStatus {
+    int64 timestamp = 1;
+    double value = 2;
+}
+
 message StringDatapoint {
     int64 timestamp = 1;
     string value = 2;
@@ -49,6 +54,8 @@ message AggregateDatapoint {
     double durationGood = 15;
     double durationUncertain = 16;
     double durationBad = 17;
+    NumericDatapointWithoutStatus maxDataPoint = 18;
+    NumericDatapointWithoutStatus minDataPoint = 19;
 }
 
 message AggregateDatapoints {
