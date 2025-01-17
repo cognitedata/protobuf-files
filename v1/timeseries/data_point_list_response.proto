@@ -15,6 +15,7 @@ message DataPointListItem {
     string unit = 8;
     string nextCursor = 9;
     string unitExternalId = 10;
+    string type = 12;
 
     oneof datapointType {
         NumericDatapoints numericDatapoints = 3;
