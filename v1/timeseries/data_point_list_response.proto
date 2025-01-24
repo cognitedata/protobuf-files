@@ -10,6 +10,7 @@ enum TimeSeriesType {
     TIMESERIES_TYPE_UNSPECIFIED = 0;
     TIMESERIES_TYPE_NUMERIC = 1;
     TIMESERIES_TYPE_STRING = 2;
+    TIMESERIES_TYPE_STATE = 3;
 }
 
 message DataPointListItem {
