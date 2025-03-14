@@ -49,6 +49,8 @@ message AggregateDatapoint {
     double durationGood = 15;
     double durationUncertain = 16;
     double durationBad = 17;
+    NumericDatapoint maxDatapoint = 18;
+    NumericDatapoint minDatapoint = 19;
 }
 
 message AggregateDatapoints {
