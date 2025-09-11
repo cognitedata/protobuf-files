@@ -70,8 +70,8 @@ message AggregateDatapoints {
 }
 
 message StateAggregate {
-    optional string stringValue = 1;
-    int64 numericValue = 2;
+    int64 numericValue = 1;
+    optional string stringValue = 2;
     optional int64 stateCount = 3;
     optional int64 stateTransitions = 4;
     optional int64 stateDuration = 5;
