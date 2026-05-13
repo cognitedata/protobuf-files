@@ -1,0 +1,21 @@
+on: [pull_request]
+
+jobs:
+  checkout_compile_lint:
+    runs-on: ubuntu-latest
+    name: Compile, format, and lint protobuf files
+    steps:
+      - name: Checkout
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+        with:
+          fetch-depth: 0
+      - name: Check
+        uses: bufbuild/buf-action@8f4a1456a0ab6a1eb80ba68e53832e6fcfacc16c # v1
+        with:
+          token: ''
+          lint: true
+          format: false
+          breaking: true
+          breaking_against: .git#branch=origin/master
+          push: false
+          archive: false
