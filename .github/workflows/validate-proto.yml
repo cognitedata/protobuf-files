@@ -13,7 +13,7 @@ jobs:
         uses: bufbuild/buf-action@8f4a1456a0ab6a1eb80ba68e53832e6fcfacc16c # v1
         with:
           token: ''
-          paths: "v1/timeseries"
+          input: "v1/timeseries"
           lint: true
           format: false
           breaking: true
