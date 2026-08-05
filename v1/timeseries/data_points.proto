@@ -63,6 +63,7 @@ message AggregateDatapoint {
     NumericDatapoint maxDatapoint = 18;
     NumericDatapoint minDatapoint = 19;
     repeated StateAggregate stateAggregates = 20;
+    optional string stringStepInterpolation = 21;
 }
 
 message AggregateDatapoints {
