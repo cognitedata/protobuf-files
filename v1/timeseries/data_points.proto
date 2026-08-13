@@ -62,13 +62,45 @@ message AggregateDatapoint {
     double durationBad = 17;
     NumericDatapoint maxDatapoint = 18;
     NumericDatapoint minDatapoint = 19;
-    repeated StateAggregate stateAggregates = 20;
+    repeated StateAggregate stateAggregates = 20 [deprecated = true];
+}
+
+message StringAggregateDatapoint {
+    int64 timestamp = 1;
+    double count = 2;
+    double countGood = 3;
+    double countUncertain = 4;
+    double countBad = 5;
+    double durationGood = 6;
+    double durationUncertain = 7;
+    double durationBad = 8;
+    string interpolation = 9;
+    string stepInterpolation = 10;
+}
+
+message StateAggregateDatapoint {
+    int64 timestamp = 1;
+    double count = 2;
+    double countGood = 3;
+    double countUncertain = 4;
+    double countBad = 5;
+    double durationGood = 6;
+    double durationUncertain = 7;
+    double durationBad = 8;
+    StateDatapoint interpolation = 9;
+    StateDatapoint stepInterpolation = 10;
+    repeated StateAggregate stateAggregates = 11;
 }
 
 message AggregateDatapoints {
     repeated AggregateDatapoint datapoints = 1;
 }
-
+message StringAggregateDatapoints {
+    repeated StringAggregateDatapoint datapoints = 1;
+}
+message StateAggregateDatapoints {
+    repeated StateAggregateDatapoint datapoints = 1;
+}
 message StateAggregate {
     int64 numericValue = 1;
     optional string stringValue = 2;
