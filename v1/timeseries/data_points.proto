@@ -38,6 +38,11 @@ message StateDatapoint {
     Status status = 4;
 }
 
+message StateDatapointValue {
+    optional int64 numericValue = 1;
+    optional string stringValue = 2;
+}
+
 message StateDatapoints {
     repeated StateDatapoint datapoints = 1;
 }
@@ -87,8 +92,8 @@ message StateAggregateDatapoint {
     double durationGood = 6;
     double durationUncertain = 7;
     double durationBad = 8;
-    StateDatapoint interpolation = 9;
-    StateDatapoint stepInterpolation = 10;
+    StateDatapointValue interpolation = 9;
+    StateDatapointValue stepInterpolation = 10;
     repeated StateAggregate stateAggregates = 11;
 }
 
