@@ -28,6 +28,7 @@ message DataPointListItem {
         NumericDatapoints numericDatapoints = 3;
         StringDatapoints stringDatapoints = 4;
         AggregateDatapoints aggregateDatapoints = 5;
+        StateAggregateDatapoints stateAggregateDatapoints = 15;
         StateDatapoints stateDatapoints = 13;
     }
 }
