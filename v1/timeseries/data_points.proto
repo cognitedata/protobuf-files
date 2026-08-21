@@ -38,11 +38,6 @@ message StateDatapoint {
     Status status = 4;
 }
 
-message StateDatapointValue {
-    optional int64 numericValue = 1;
-    optional string stringValue = 2;
-}
-
 message StateDatapoints {
     repeated StateDatapoint datapoints = 1;
 }
@@ -97,14 +92,18 @@ message StateAggregateDatapoint {
     repeated StateAggregate stateAggregates = 11;
 }
 
+message StateDatapointValue {
+    optional int64 numericValue = 1;
+    optional string stringValue = 2;
+}
+message StateAggregateDatapoints {
+    repeated StateAggregateDatapoint datapoints = 1;
+}
 message AggregateDatapoints {
     repeated AggregateDatapoint datapoints = 1;
 }
 message StringAggregateDatapoints {
     repeated StringAggregateDatapoint datapoints = 1;
-}
-message StateAggregateDatapoints {
-    repeated StateAggregateDatapoint datapoints = 1;
 }
 message StateAggregate {
     int64 numericValue = 1;
