@@ -65,6 +65,19 @@ message AggregateDatapoint {
     repeated StateAggregate stateAggregates = 20 [deprecated = true];
 }
 
+message StringAggregateDatapoint {
+    int64 timestamp = 1;
+    double count = 2;
+    double countGood = 3;
+    double countUncertain = 4;
+    double countBad = 5;
+    double durationGood = 6;
+    double durationUncertain = 7;
+    double durationBad = 8;
+    string interpolation = 9;
+    string stepInterpolation = 10;
+}
+
 message StateAggregateDatapoint {
     int64 timestamp = 1;
     double count = 2;
@@ -89,7 +102,9 @@ message StateAggregateDatapoints {
 message AggregateDatapoints {
     repeated AggregateDatapoint datapoints = 1;
 }
-
+message StringAggregateDatapoints {
+    repeated StringAggregateDatapoint datapoints = 1;
+}
 message StateAggregate {
     int64 numericValue = 1;
     optional string stringValue = 2;
