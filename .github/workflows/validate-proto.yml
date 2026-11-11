@@ -16,7 +16,7 @@ jobs:
           input: "v1/timeseries"
           lint: false
           format: false
-          breaking: false
+          breaking: true
           breaking_against: .git#branch=origin/master,subdir=v1/timeseries
           push: false
           archive: false
